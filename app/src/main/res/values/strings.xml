@@ -11,6 +11,7 @@
         <item>Completa</item>
         <item>Combos</item>
         <item>Promociones</item>
+        <item>Música</item>
 
     </string-array>
     <string name="title_activity_second">SecondActivity</string>
