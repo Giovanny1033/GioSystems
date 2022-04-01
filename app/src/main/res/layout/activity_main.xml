@@ -8,12 +8,21 @@
 
     <ListView
         android:id="@+id/accountList"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="409dp"
+        android:layout_height="525dp"
+        android:entries="@array/accounts"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:entries="@array/accounts" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/whatsapp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="654dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

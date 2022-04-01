@@ -2,9 +2,16 @@
     <string name="app_name">Gio Systems</string>
     <string-array name="accounts">
         <item>Netflix</item>
-        <item>Disney</item>
+        <item>Disney +</item>
         <item>Amazon Prime</item>
         <item>HBO</item>
+        <item>Star +</item>
+        <item>Plex</item>
+        <item>Unidad</item>
+        <item>Completa</item>
+        <item>Combos</item>
+        <item>Promociones</item>
+
     </string-array>
     <string name="title_activity_second">SecondActivity</string>
     <!-- Strings used for fragments for navigation -->

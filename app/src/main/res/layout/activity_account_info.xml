@@ -36,5 +36,12 @@
         android:textStyle="bold"
         />
 
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/whatsapp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="654dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

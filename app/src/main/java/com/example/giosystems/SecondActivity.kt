@@ -8,6 +8,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.giosystems.databinding.ActivitySecondBinding
+import java.io.Serializable
 
 class SecondActivity : AppCompatActivity() {
 
@@ -32,9 +33,26 @@ class SecondActivity : AppCompatActivity() {
         }
     }
 
+    private fun setupActionBarWithNavController(
+        navController: Any,
+        appBarConfiguration: AppBarConfiguration
+    ) {
+
+
+    }
+
+    private fun findNavController(navHostFragmentContentSecond: Serializable): Any {
+        TODO("Not yet implemented")
+    }
+
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_second)
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }
+}
+
+private fun Any.navigateUp(appBarConfiguration: AppBarConfiguration): Boolean {
+
+
 }
