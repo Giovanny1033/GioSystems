@@ -4,24 +4,25 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ListView
 import com.example.giosystems.model.AccountInfo
 
 class MainActivity : AppCompatActivity() {
 
-    val accountList = listOf<AccountInfo>{
+    val accountList = listOf<AccountInfo>(
         AccountInfo("Netflix", "netflix", "13000 38000"),
         AccountInfo("Disney +", "disney", "5000 11000"),
         AccountInfo("Amazon Prime", "amazon", "5000 8000"),
         AccountInfo("HBO MAX", "hbo", "6000 11000"),
         AccountInfo("STAR +", "star", "6000 11000")
-    }
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btn = findViewById(R.id.button) as Button
+        val btn = findViewById(R.id.myButton) as ImageButton
         btn.setOnClickListener{goToSecondActivity()}
 
 

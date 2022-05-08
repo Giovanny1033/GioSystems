@@ -21,38 +21,7 @@ class SecondActivity : AppCompatActivity() {
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar)
-
-        val navController = findNavController(R.id.nav_host_fragment_content_second)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
-
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
-    }
-
-    private fun setupActionBarWithNavController(
-        navController: Any,
-        appBarConfiguration: AppBarConfiguration
-    ) {
-
 
     }
 
-    private fun findNavController(navHostFragmentContentSecond: Serializable): Any {
-        TODO("Not yet implemented")
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_second)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
-    }
-}
-
-private fun Any.navigateUp(appBarConfiguration: AppBarConfiguration): Boolean {
-
-
-}
+     }
