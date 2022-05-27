@@ -21,7 +21,16 @@ class SecondActivity : AppCompatActivity() {
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        btnBack.setOnClickListener {onBackPressed()}
+        getAndShowName()
 
+
+    }
+
+    fun getAndShowName(){
+        val bundle = intent.extras
+        val name = bundle?.get("INTENT_NAME")
+        accountTitle.text = "Bienvenido $name"
     }
 
      }

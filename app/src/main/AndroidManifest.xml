@@ -11,23 +11,26 @@
         android:theme="@style/Theme.GioSystems">
         <activity
             android:name=".SecondActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_activity_second"
-            android:theme="@style/Theme.GioSystems.NoActionBar" />
+            android:theme="@style/Theme.GioSystems.NoActionBar" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
         <activity
             android:name=".FirstActivity"
             android:exported="false" />
         <activity
-            android:name=".activity_account_info"
+            android:name=".AccountInfoActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

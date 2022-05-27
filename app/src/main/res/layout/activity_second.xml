@@ -3,44 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="vertical"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="120dp" />
-
-    <TextView
-        android:id="@+id/accountSynopsis5"
-        android:layout_width="69dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="8dp"
-        android:text="HBO MAX"
-        android:textStyle="bold"
-        app:layout_constraintHorizontal_bias="0.195"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/accountHbo" />
-
-    <TextView
-        android:id="@+id/accountSynopsis6"
-        android:layout_width="69dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="8dp"
-        android:text="Disney +"
-        android:textStyle="bold"
-        app:layout_constraintHorizontal_bias="0.707"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/accountDisney" />
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
 
     <TextView
         android:id="@+id/accountTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cuentas Streaming"
+        android:textColor="#00BCD4"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,108 +21,186 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.027" />
 
-    <TextView
-        android:id="@+id/accountSynopsis"
-        android:layout_width="103dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="8dp"
-        android:text="Amazon Prime"
-        android:textStyle="bold"
-        app:layout_constraintHorizontal_bias="0.785"
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/accountAmazon" />
+        app:layout_constraintTop_toBottomOf="@+id/accountTitle">
 
-    <TextView
-        android:id="@+id/accountSynopsis2"
-        android:layout_width="69dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="8dp"
-        android:text="Netflix"
-        android:textStyle="bold"
-        app:layout_constraintHorizontal_bias="0.193"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/accountIma" />
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="3">
 
-    <TextView
-        android:id="@+id/accountSynopsis3"
-        android:layout_width="69dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="12dp"
-        android:text="Star"
-        android:textStyle="bold"
-        app:layout_constraintHorizontal_bias="0.195"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/accountStar" />
+            <LinearLayout android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/accountSynopsis4"
-        android:layout_width="69dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="12dp"
-        android:text="Plex"
-        android:textStyle="bold"
-        app:layout_constraintHorizontal_bias="0.707"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/accountPlex" />
+                <ImageView
+                    android:id="@+id/accountIma"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginRight="40dp"
+                    android:src="@drawable/netflix" />
 
-    <ImageView
-        android:id="@+id/accountIma"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:src="@drawable/netflix"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="91dp" />
+                <TextView
+                    android:id="@+id/accountSynopsis2"
+                    android:layout_width="69dp"
+                    android:layout_height="23dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Netflix"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.193"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/accountIma" />
 
-    <ImageView
-        android:id="@+id/accountDisney"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:src="@drawable/disney"
-        tools:layout_editor_absoluteX="242dp"
-        tools:layout_editor_absoluteY="424dp" />
+            </LinearLayout>
 
-    <ImageView
-        android:id="@+id/accountAmazon"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:src="@drawable/amazon"
-        tools:layout_editor_absoluteX="242dp"
-        tools:layout_editor_absoluteY="91dp" />
+            <LinearLayout android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/accountHbo"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:src="@drawable/hbo"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="424dp" />
+                <ImageView
+                    android:id="@+id/accountAmazon"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/amazon" />
 
-    <ImageView
-        android:id="@+id/accountStar"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:src="@drawable/star"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="262dp" />
+                <TextView
+                    android:id="@+id/accountSynopsis"
+                    android:layout_width="103dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Amazon Prime"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.785"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/accountAmazon" />
+            </LinearLayout>
 
-    <ImageView
-        android:id="@+id/accountPlex"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:src="@drawable/plex"
-        tools:layout_editor_absoluteX="242dp"
-        tools:layout_editor_absoluteY="262dp" />
+            <LinearLayout android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/accountStar"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/star"
+                    app:layout_constraintHorizontal_bias="0.785"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/accountAmazon" />
+
+                <TextView
+                    android:id="@+id/accountSynopsis3"
+                    android:layout_width="103dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Star"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.785"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/accountStar" />
+            </LinearLayout>
+
+            <LinearLayout android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/accountPlex"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/plex" />
+
+                <TextView
+                    android:id="@+id/accountSynopsis4"
+                    android:layout_width="69dp"
+                    android:layout_height="23dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Plex"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.707"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/accountPlex" />
+
+            </LinearLayout>
+
+            <LinearLayout android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/accountHbo"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/hbo" />
+
+                <TextView
+                    android:id="@+id/accountSynopsis5"
+                    android:layout_width="69dp"
+                    android:layout_height="23dp"
+                    android:layout_marginTop="8dp"
+                    android:text="HBO MAX"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.195"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/accountHbo" />
+
+            </LinearLayout>
+
+            <LinearLayout android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/accountDisney"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/disney" />
+
+                <TextView
+                    android:id="@+id/accountSynopsis6"
+                    android:layout_width="69dp"
+                    android:layout_height="23dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Disney +"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.707"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/accountDisney" />
+
+            </LinearLayout>
+        </GridLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Volver"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
+        android:id="@+id/imageButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:src="@drawable/whatsapp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="654dp" />
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="0.893" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

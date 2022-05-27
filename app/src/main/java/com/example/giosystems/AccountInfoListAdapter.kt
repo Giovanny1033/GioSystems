@@ -15,8 +15,8 @@ class AccountInfoListAdapter(val ctx: Activity, val data: List<AccountInfo>)
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val inflater = ctx.getSystemService(Service.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = inflater.inflate(R.layout.account_list, null)
-        val title = view.findViewById<TextView>(R.id.accountTitle)
-        title.text = data[position].title
+        //val title = view.findViewById<TextView>(R.id.accountTitle)
+        //title.text = data[position].title
         return view
     }
 }
