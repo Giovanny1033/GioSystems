@@ -21,6 +21,7 @@ class SecondActivity : AppCompatActivity() {
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val btnBack = null
         btnBack.setOnClickListener {onBackPressed()}
         getAndShowName()
 
